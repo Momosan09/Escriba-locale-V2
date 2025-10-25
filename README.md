@@ -50,4 +50,3 @@ Interfaz hecha usando [JavaFX](https://openjfx.io/).
 En caso de que quieras entender mejor sobre internacionalizacion y localizacion, canal de youtube [makigas: aprende a programar](https://www.youtube.com/watch?v=l5JxhDhjNRY).
 
 
-
