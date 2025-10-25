@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="740.0" prefWidth="642.0" style="-fx-background-color: #454545;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controladores.PantallaPrincipalController">
+   <children>
+      <TextField fx:id="txfRuta" layoutX="14.0" layoutY="119.0" />
+      <Button fx:id="btnElegirDirectorio" layoutX="169.0" layoutY="119.0" mnemonicParsing="false" text="Button" />
+      <Label layoutX="14.0" layoutY="102.0" text="Ruta" textFill="WHITE" />
+      <Separator layoutX="2.0" layoutY="179.0" prefHeight="3.0" prefWidth="640.0" />
+      <Label layoutX="15.0" layoutY="193.0" text="Nombre del bundle" textFill="WHITE">
+         <tooltip>
+            <Tooltip text="Nombre del objeto del tipo I18NBundle" />
+         </tooltip>
+      </Label>
+      <TextField fx:id="txfNombre" layoutX="16.0" layoutY="210.0" />
+      <CheckBox fx:id="chkAutoDetectar" disable="true" layoutX="197.0" layoutY="214.0" mnemonicParsing="false" text="Auto detectar (Puede dar errores si tiene mas de un objeto I18NBundle)" textFill="WHITE">
+         <tooltip>
+            <Tooltip text="Todavia no esta listo" />
+         </tooltip></CheckBox>
+      <CheckBox fx:id="chkSubCarpetas" layoutX="13.0" layoutY="151.0" mnemonicParsing="false" selected="true" text="¿Subcarpetas?" textFill="WHITE" />
+      <Separator layoutX="2.0" layoutY="258.0" prefHeight="3.0" prefWidth="640.0" />
+      <TextField fx:id="txfFormato" layoutX="14.0" layoutY="292.0" promptText="npc.rey#mision" />
+      <Label layoutX="13.0" layoutY="273.0" text="Especifique formato" textFill="WHITE">
+         <tooltip>
+            <Tooltip text="Nombre del objeto del tipo I18NBundle" />
+         </tooltip>
+      </Label>
+      <Separator layoutX="2.0" layoutY="338.0" prefHeight="3.0" prefWidth="640.0" />
+      <Label layoutX="15.0" layoutY="349.0" text="Idioma a traducir" textFill="WHITE">
+         <tooltip>
+            <Tooltip text="Nombre del objeto del tipo I18NBundle" />
+         </tooltip>
+      </Label>
+      <TextField fx:id="txfIdioma" layoutX="16.0" layoutY="366.0" prefHeight="25.0" prefWidth="79.0" promptText="es_ar" />
+      <Button fx:id="btnOK" layoutX="262.0" layoutY="461.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="120.0" text="OK" />
+      <Label fx:id="LblCompletarCampoRuta" layoutX="102.0" layoutY="102.0" text="* complete este campo" textFill="RED" />
+      <Label fx:id="LblCompletarCampoNombre" layoutX="162.0" layoutY="193.0" text="* complete este campo" textFill="RED" />
+      <Label fx:id="LblCompletarCampoFormato" layoutX="169.0" layoutY="296.0" text="* complete este campo" textFill="RED" />
+      <Label fx:id="LblCompletarCampoIdioma" layoutX="100.0" layoutY="370.0" text="* complete este campo" textFill="RED" />
+      <TextField fx:id="txfRutaSalida" layoutX="398.0" layoutY="119.0" />
+      <Button fx:id="btnElegirDirectorioSalida" layoutX="553.0" layoutY="119.0" mnemonicParsing="false" text="Button" />
+      <Label layoutX="398.0" layoutY="102.0" text="Ruta de salida" textFill="WHITE" />
+      <Label fx:id="LblCompletarCampoRutaSalida" layoutX="486.0" layoutY="102.0" text="* complete este campo" textFill="RED" />
+      <Separator layoutX="320.0" layoutY="109.0" orientation="VERTICAL" prefHeight="70.0" prefWidth="0.0" />
+      <ScrollPane layoutX="7.0" layoutY="540.0" prefHeight="200.0" prefWidth="630.0" style="-fx-background-color: #252a34;">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" style="-fx-background-color: #252a34;">
+               <children>
+                  <TextArea fx:id="txaOutput" prefHeight="200.0" prefWidth="620.0" style="-fx-background-color: #252a34;" wrapText="true" />
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <Separator layoutX="6.0" layoutY="70.0" prefHeight="3.0" prefWidth="640.0" style="-fx-border-color: #000000;" />
+      <HBox alignment="CENTER" layoutX="6.0" prefHeight="60.0" prefWidth="640.0">
+         <children>
+            <Label text="ESCRIBA" textFill="WHITE">
+               <font>
+                  <Font name="Linux Biolinum G Regular" size="54.0" />
+               </font>
+            </Label>
+            <AnchorPane prefHeight="63.0" prefWidth="90.0" />
+            <Label contentDisplay="CENTER" graphicTextGap="6.0" text="LOCALE" textFill="#e74a45">
+               <font>
+                  <Font name="EmojiOne Color SVGinOT" size="54.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
