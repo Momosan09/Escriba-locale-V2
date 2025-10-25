@@ -38,7 +38,7 @@ Es una herramienta que busca facilitar la traduccion de videojueos hechos con [L
 
 > Para mas idiomas modifique el campo de idioma y vuelva a ejecutar
 
-Interfaz hecha usando (JavaFX)[https://openjfx.io/].
+Interfaz hecha usando [JavaFX](https://openjfx.io/).
 
 En caso de que quieras entender mejor sobre internacionalizacion y localizacion, canal de youtube [makigas: aprende a programar](https://www.youtube.com/watch?v=l5JxhDhjNRY).
 
