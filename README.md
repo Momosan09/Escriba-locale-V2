@@ -9,7 +9,8 @@ Es una herramienta que busca facilitar la traduccion de videojueos hechos con [L
   1. Cree una clase abstracta que contenga un objeto del tipo I18NBundle
   <img width="945" height="69" alt="manualCodigo1" src="https://github.com/user-attachments/assets/c2caf1d6-3d47-4a99-bbb8-ce853845aa84" />
 
-  2. Utilize el bundle donde desea traducir, poniendo las claves
+
+  2. Utilize el bundle donde desea traducir, creando sus propias claves
   
   <img width="808" height="666" alt="manualCodigo2" src="https://github.com/user-attachments/assets/37828577-46fa-4544-b740-0d62089725dd" />
   
@@ -22,11 +23,19 @@ Es una herramienta que busca facilitar la traduccion de videojueos hechos con [L
   <img width="656" height="488" alt="manualEscriba1" src="https://github.com/user-attachments/assets/b6606b93-3156-4d01-be28-3f0a1ec87b5e" />
   
   > El directorio principal es el que contiene a `core`, `desktop`, `android`, `...`
-  
   > el directorio de salida es, por defecto, assets -> locale
 
   4. Especifique el nombre del objeto tipo I18NBundle
-  <img width="637" height="768" alt="manualEscriba2" src="https://github.com/user-attachments/assets/677246bc-715d-451d-95a6-c9f2e3308b10" />   
-     > Se refiere al objeto creado en la clase abstracta (ver primera imagen)
-     > Note como tanto en el codigo como en el Escriba Locale, el nombre del objeto son iguales
+  <img width="637" height="768" alt="manualEscriba2" src="https://github.com/user-attachments/assets/677246bc-715d-451d-95a6-c9f2e3308b10" />
+
+  > Se refiere al objeto creado en la clase abstracta (ver primera imagen)
+  > Note como tanto en el codigo como en el Escriba Locale, el nombre del objeto son iguales
+
+  5. Especifique el idioma 
+  6. Ejecute
+
+# ¡Listo! Usted tiene un archivo .properties del idioma especificado generado con todas las claves que puso en su codigo
+
+> Para mas idiomas modifique el campo de idioma y vuelva a ejecutar
+
 
