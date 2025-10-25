@@ -7,9 +7,13 @@ Es una herramienta que busca facilitar la traduccion de videojueos hechos con [L
 
 ## Su codigo
   1. Cree una clase abstracta que contenga un objeto del tipo I18NBundle
-  2. Utilize el bundle donde desea traducir, poniendo las claves
-  > Es recomendable crear un formato para sus claves **Ej:** `npc.misiones.viejo`
+  <img width="945" height="69" alt="manualCodigo1" src="https://github.com/user-attachments/assets/c2caf1d6-3d47-4a99-bbb8-ce853845aa84" />
 
+  2. Utilize el bundle donde desea traducir, poniendo las claves
+  
+  <img width="808" height="666" alt="manualCodigo2" src="https://github.com/user-attachments/assets/37828577-46fa-4544-b740-0d62089725dd" />
+  
+  > Es recomendable crear un formato para sus claves **Ej:** `npc.misiones.viejo`
 
 ## Escriba locale
   1. Descargar el ejecutable
