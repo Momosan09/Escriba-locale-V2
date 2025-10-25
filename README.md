@@ -26,4 +26,7 @@ Es una herramienta que busca facilitar la traduccion de videojueos hechos con [L
   > el directorio de salida es, por defecto, assets -> locale
 
   4. Especifique el nombre del objeto tipo I18NBundle
-     > 
+  <img width="637" height="768" alt="manualEscriba2" src="https://github.com/user-attachments/assets/677246bc-715d-451d-95a6-c9f2e3308b10" />   
+     > Se refiere al objeto creado en la clase abstracta (ver primera imagen)
+     > Note como tanto en el codigo como en el Escriba Locale, el nombre del objeto son iguales
+
