@@ -17,9 +17,13 @@ Es una herramienta que busca facilitar la traduccion de videojueos hechos con [L
 
 ## Escriba locale
   1. Descargar el ejecutable
-  2. Seleccionar el directorio principal del juego.
-     > El directorio principal es el que contiene a core, desktop, ...
-     > el directorio de salida es, por defecto, assets -> locale
 
-  3. Especifique el nombre del objeto tipo I18NBundle
+  2. Seleccionar el directorio principal del juego.
+  <img width="656" height="488" alt="manualEscriba1" src="https://github.com/user-attachments/assets/b6606b93-3156-4d01-be28-3f0a1ec87b5e" />
+  
+  > El directorio principal es el que contiene a `core`, `desktop`, `android`, `...`
+  
+  > el directorio de salida es, por defecto, assets -> locale
+
+  4. Especifique el nombre del objeto tipo I18NBundle
      > 
