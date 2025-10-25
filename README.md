@@ -41,7 +41,7 @@ Es una herramienta que busca facilitar la traduccion de videojueos hechos con [L
   <img width="850" height="860" alt="manualEscriba4" src="https://github.com/user-attachments/assets/ef304b17-d83b-45f6-b0a9-143910955213" />
 
 
-# ¡Listo! Usted tiene un archivo .properties del idioma especificado generado con todas las claves que puso en su codigo
+# ¡Listo! ¡Usted tiene un archivo .properties del idioma especificado generado con todas las claves que puso en su codigo y listo para editar!
 
 > Para mas idiomas modifique el campo de idioma y vuelva a ejecutar
 
