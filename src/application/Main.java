@@ -13,13 +13,15 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
+			
 			BorderPane root = new BorderPane();
 			AnchorPane pantallaInicial = FXMLLoader.load(getClass().getResource("/application/res/pantallaPrincipal.fxml"));
 			root.setCenter(pantallaInicial);
-			Scene scene = new Scene(root,640,600);
+			Scene scene = new Scene(root,640,740);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
 			primaryStage.show();
+			primaryStage.setTitle("Escriba locale V2 - Para LibGDX");
 
 		} catch(Exception e) {
 			e.printStackTrace();

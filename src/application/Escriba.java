@@ -11,6 +11,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.HashSet;
 
 import application.Util.Recursos;
 import javafx.scene.control.TextArea;
@@ -25,9 +26,17 @@ public class Escriba {
     private int archivosRevisados = 0;
     private int cantidadDirectorios = 0;
     
+    private boolean comentarLineas, comentarClase;
+    
+    // conjunto para evitar duplicados dentro de todos los archivos
+    static HashSet<String> clavesYaAgregadas = new HashSet<>();
 
-    public void procesarDirectorio(String rutaBase, TextArea output) {
+    public void procesarDirectorio(String rutaBase, TextArea output, boolean comentarLineas, boolean comentarClase) {
     	this.out = output;
+    	out.clear();
+    	this.comentarClase = comentarClase;
+    	this.comentarLineas = comentarLineas;
+    	
         if (rutaBase == null || rutaBase.trim().isEmpty()) {
             System.out.println("Ruta base invalida");
             return;
@@ -62,7 +71,7 @@ public class Escriba {
 
     private void leerArchivo(File archivo) {
         System.out.println("Procesando: " + archivo.getAbsolutePath());
-        out.appendText(archivo.getAbsolutePath());
+        out.appendText("\n"+archivo.getAbsolutePath());
         archivosRevisados++;
         leer(archivo);
 
@@ -75,20 +84,32 @@ public class Escriba {
             int numeroLinea = 0;
             boolean encabezadoEscrito = false;
 
+
+
             while ((linea = r.readLine()) != null) {
                 numeroLinea++;
                 if (linea.contains(Recursos.nombreBundle + ".get(")) {
-                	lineasDeTraduccion++;
+                    lineasDeTraduccion++;
                     Matcher m = p.matcher(linea);
                     while (m.find()) {
                         String texto = m.group(1).trim();
                         if (!texto.isEmpty()) {
+
+                            // Evitar duplicados globalmente
+                            if (clavesYaAgregadas.contains(texto))
+                                continue;
+                            clavesYaAgregadas.add(texto);
+
                             // Comentario con archivo y línea
-                            if (!encabezadoEscrito) {
-                                listaNueva.add("# Archivo: " + f.getName());
+                            if (!encabezadoEscrito && comentarClase) {
+                                listaNueva.add("\n# Archivo: " + f.getName());
                                 encabezadoEscrito = true;
                             }
-                            listaNueva.add(texto + " = # Linea " + numeroLinea);
+                            if (comentarLineas) {
+                                listaNueva.add(texto + " = # Linea " + numeroLinea);
+                            } else {
+                                listaNueva.add(texto + " = ");
+                            }
                         }
                     }
                 }
@@ -97,6 +118,7 @@ public class Escriba {
             e.printStackTrace();
         }
     }
+
 
     private void escribir() {
         try {

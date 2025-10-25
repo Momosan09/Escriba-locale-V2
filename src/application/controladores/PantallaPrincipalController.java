@@ -25,6 +25,8 @@ public class PantallaPrincipalController {
 
     @FXML private CheckBox chkAutoDetectar;
     @FXML private CheckBox chkSubCarpetas;
+    @FXML private CheckBox chkComentarLineas;
+    @FXML private CheckBox chkComentarClase;
 
     @FXML private Button btnOK;
     @FXML private Button btnElegirDirectorio;
@@ -107,7 +109,7 @@ public class PantallaPrincipalController {
             LblCompletarCampoNombre.setVisible(false);
         }
 
-        if (txfFormato.getText().trim().isEmpty()) {
+        if (txfFormato.getText().trim().isEmpty() && !txfFormato.isDisabled()) {
             LblCompletarCampoFormato.setVisible(true);
             camposValidos = false;
         } else {
@@ -144,7 +146,7 @@ public class PantallaPrincipalController {
         System.out.println("Subcarpetas: " + chkSubCarpetas.isSelected());
         System.out.println("Auto detectar: " + chkAutoDetectar.isSelected());
         
-        escribaLocale.procesarDirectorio(Recursos.ruta, txaOutput);
+        escribaLocale.procesarDirectorio(Recursos.ruta, txaOutput, chkComentarLineas.isSelected(), chkComentarClase.isSelected());
 
     }
 
